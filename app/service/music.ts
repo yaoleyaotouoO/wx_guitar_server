@@ -7,7 +7,7 @@ export default class MusicService extends Service {
   public async getMusicList() {
     const { app } = this;
 
-    const result = await (app as any).mysql.get('draw_room');
+    const result = await (app as any).mysql.select('music');
     return result;
   }
 }
